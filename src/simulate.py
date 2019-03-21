@@ -95,9 +95,10 @@ def simulate():
         probability_plot_data.set_data(se.x, se.prob())
         return psi_plot_data, probability_plot_data
 
-    ani = FuncAnimation(fig, update, init_func=init, interval=1, blit=False)
+    
     plt.show()
+    return FuncAnimation(fig, update, init_func=init, interval=1, blit=False)
 
 
 if __name__ == "__main__":
-    simulate()
+    ani = simulate()
